@@ -2189,64 +2189,70 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         pdf.set_font('Times New Roman', 'B', 20)
         pdf.cell(txt=' ', ln=1)
         pdf.cell(txt=self.game_name, ln=1)
-        pdf.cell(txt='CHARACTER LOGBOOK', ln=1)
         pdf.set_font('Times New Roman', '', 16)
         pdf.cell(txt=' ', ln=1)
         pdf.cell(txt='Name: ' + self.charnameEdit.text(), ln=1)
-        pdf.cell(txt='Age: ' + self.ageEdit.text(), ln=1)
-        pdf.cell(txt='Gender: ' + self.genderEdit.text(), ln=1)
-        pdf.cell(txt='Ancient Flag: ' + self.rank_chosen, ln=1)
-        pdf.cell(txt='Language: ' + self.languageDisplay.text(), ln=1)
+        pdf.cell(txt='Age: ' + self.ageEdit.text() + '        Gender: ' + self.genderEdit.text(), ln=1)
+        pdf.cell(txt='Ancient Flag: ' + self.rank_chosen + '        Language: ' + self.languageDisplay.text(), ln=1)
         pdf.cell(txt='Class: ' + self.dept_chosen, ln=1)
-        pdf.cell(txt='Level: ' + str(self.char_level) + '    XP: ' + str(self.char_xp), ln=1)
+        pdf.cell(txt='Level: ' + str(self.char_level) + '        XP: ' + str(self.char_xp), ln=1)
         pdf.cell(txt=' ', ln=1)
-        pdf.set_font('Times New Roman', '', 22)
+        pdf.cell(txt='     Limits', ln=1)
+        pdf.cell(txt='ENCUMBRANCE: ' + str(1 + self.bodyScore.value() + self.strengthSkill.value()), ln=1)
+        pdf.cell(txt='MOVE/COMBAT: ' + str(1 + self.bodyScore.value() + self.agilitySkill.value()), ln=1)
+        pdf.cell(txt='MOVE/TRAVEL: ' + str(1 + self.bodyScore.value() + self.strengthSkill.value()), ln=1)
+        pdf.cell(txt=' ', ln=1)
+        pdf.cell(txt='     Attributes', ln=1)
+        pdf.set_font('Times New Roman', '', 18)
         pdf.cell(txt='BODY: ' + str(self.bodyScore.value()), ln=1)
         pdf.cell(txt='MIND: ' + str(self.mindScore.value()), ln=1)
         pdf.cell(txt='SPIRIT: ' + str(self.spiritScore.value()), ln=1)
+        pdf.set_font('Times New Roman', '', 16)
+        pdf.cell(txt='     Status', ln=1)
+        pdf.set_font('Times New Roman', '', 18)
         pdf.cell(txt='HEALTH: ' + str(self.healthDisplay.text()), ln=1)
         pdf.cell(txt='SANITY: ' + str(self.sanityDisplay.text()), ln=1)
         pdf.cell(txt='MORALE: ' + str(self.moraleDisplay.text()), ln=1)
         pdf.set_font('Times New Roman', '', 16)
         pdf.cell(txt=' ', ln=1)
-        pdf.cell(txt='      Body Skills', ln=1)
-        pdf.cell(txt='Agility: ' + str(self.agilitySkill.value()), ln=1)
-        pdf.cell(txt='Beauty: ' + str(self.beautySkill.value()), ln=1)
-        pdf.cell(txt='Strength: ' + str(self.strengthSkill.value()), ln=1)
-        pdf.cell(txt='      Mind Skills', ln=1)
-        pdf.cell(txt='Knowledge: ' + str(self.knowledgeSkill.value()), ln=1)
-        pdf.cell(txt='Perception: ' + str(self.perceptionSkill.value()), ln=1)
-        pdf.cell(txt='Technology: ' + str(self.technologySkill.value()), ln=1)
-        pdf.cell(txt='      Spirit Skills', ln=1)
-        pdf.cell(txt='Charisma: ' + str(self.charismaSkill.value()), ln=1)
-        pdf.cell(txt='Empathy: ' + str(self.empathySkill.value()), ln=1)
-        pdf.cell(txt='Focus: ' + str(self.focusSkill.value()), ln=1)
-        pdf.cell(txt='      Combat Skills', ln=1)
-        pdf.cell(txt='Boxing: ' + str(self.boxingSkill.value()), ln=1)
-        pdf.cell(txt='Melee: ' + str(self.meleeSkill.value()), ln=1)
-        pdf.cell(txt='Ranged: ' + str(self.rangedSkill.value()), ln=1)
+        pdf.cell(txt='Body Skills', ln=1)
+        pdf.cell(txt='   Agility: ' + str(self.agilitySkill.value()), ln=1)
+        pdf.cell(txt='   Beauty: ' + str(self.beautySkill.value()), ln=1)
+        pdf.cell(txt='   Strength: ' + str(self.strengthSkill.value()), ln=1)
+        pdf.cell(txt='Mind Skills', ln=1)
+        pdf.cell(txt='   Knowledge: ' + str(self.knowledgeSkill.value()), ln=1)
+        pdf.cell(txt='   Perception: ' + str(self.perceptionSkill.value()), ln=1)
+        pdf.cell(txt='   Technology: ' + str(self.technologySkill.value()), ln=1)
+        pdf.cell(txt='Spirit Skills', ln=1)
+        pdf.cell(txt='   Charisma: ' + str(self.charismaSkill.value()), ln=1)
+        pdf.cell(txt='   Empathy: ' + str(self.empathySkill.value()), ln=1)
+        pdf.cell(txt='   Focus: ' + str(self.focusSkill.value()), ln=1)
         pdf.add_page()
         pdf.set_font('Times New Roman', '', 10)
         pdf.cell(txt=self.game_name + '   ...continuing with character: ' + self.charnameEdit.text(), ln=1)
         pdf.set_font('Times New Roman', '', 16)
         pdf.cell(txt=' ', ln=1)
         pdf.cell(txt=' ', ln=1)
-        pdf.cell(txt='      Strange Skills', ln=1)
-        pdf.cell(txt='Art: ' + str(self.artSkill.value()), ln=1)
-        pdf.cell(txt='Languages: ' + str(self.languagesSkill.value()), ln=1)
-        pdf.cell(txt='Science: ' + str(self.scienceSkill.value()), ln=1)
-        pdf.cell(txt='      Divine Skills', ln=1)
-        pdf.cell(txt='Bless: ' + str(self.blessSkill.value()), ln=1)
-        pdf.cell(txt='Exorcism: ' + str(self.exorcismSkill.value()), ln=1)
-        pdf.cell(txt='Healing: ' + str(self.healingSkill.value()), ln=1)
-        pdf.cell(txt='      Occult Skills', ln=1)
-        pdf.cell(txt='Demonology: ' + str(self.demonologySkill.value()), ln=1)
-        pdf.cell(txt='Metamorphosis: ' + str(self.metamorphosisSkill.value()), ln=1)
-        pdf.cell(txt='Necromancy: ' + str(self.necromancySkill.value()), ln=1)
-        pdf.cell(txt='      Psionic Skills', ln=1)
-        pdf.cell(txt='Clairvoyance: ' + str(self.clairvoyanceSkill.value()), ln=1)
-        pdf.cell(txt='Psychokinesis: ' + str(self.psychokinesisSkill.value()), ln=1)
-        pdf.cell(txt='Telepathy: ' + str(self.telepathySkill.value()), ln=1)
+        pdf.cell(txt='Combat Skills', ln=1)
+        pdf.cell(txt='   Boxing: ' + str(self.boxingSkill.value()), ln=1)
+        pdf.cell(txt='   Melee: ' + str(self.meleeSkill.value()), ln=1)
+        pdf.cell(txt='   Ranged: ' + str(self.rangedSkill.value()), ln=1)
+        pdf.cell(txt='Strange Skills', ln=1)
+        pdf.cell(txt='   Art: ' + str(self.artSkill.value()), ln=1)
+        pdf.cell(txt='   Languages: ' + str(self.languagesSkill.value()), ln=1)
+        pdf.cell(txt='   Science: ' + str(self.scienceSkill.value()), ln=1)
+        pdf.cell(txt='Divine Skills', ln=1)
+        pdf.cell(txt='   Bless: ' + str(self.blessSkill.value()), ln=1)
+        pdf.cell(txt='   Exorcism: ' + str(self.exorcismSkill.value()), ln=1)
+        pdf.cell(txt='   Healing: ' + str(self.healingSkill.value()), ln=1)
+        pdf.cell(txt='Occult Skills', ln=1)
+        pdf.cell(txt='   Demonology: ' + str(self.demonologySkill.value()), ln=1)
+        pdf.cell(txt='   Metamorphosis: ' + str(self.metamorphosisSkill.value()), ln=1)
+        pdf.cell(txt='   Necromancy: ' + str(self.necromancySkill.value()), ln=1)
+        pdf.cell(txt='Psionic Skills', ln=1)
+        pdf.cell(txt='   Clairvoyance: ' + str(self.clairvoyanceSkill.value()), ln=1)
+        pdf.cell(txt='   Psychokinesis: ' + str(self.psychokinesisSkill.value()), ln=1)
+        pdf.cell(txt='   Telepathy: ' + str(self.telepathySkill.value()), ln=1)
         pdf.set_font('Times New Roman', '', 18)
         pdf.cell(txt=' ', ln=1)
         pdf.cell(txt=' ', ln=1)
@@ -2266,11 +2272,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         some_text = some_text.split()
         while len(some_text) > 0:
             some_words = ''
-            if len(some_text) > 14:
-                for i in range(14):
+            if len(some_text) > 12:
+                for i in range(12):
                     some_words += some_text[i] + ' '
                 pdf.cell(txt=some_words, ln=1)
-                some_text = some_text[14:]
+                some_text = some_text[12:]
             else:
                 for i in range(len(some_text)):
                     some_words += some_text[i] + ' '
@@ -2281,19 +2287,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         pdf.cell(txt='SPECIAL:', ln=1)
         pdf.set_font('Times New Roman', '', 14)
         pdf.cell(txt=self.specialDisplay.toPlainText(), ln=1)
-        pdf.set_font('Times New Roman', '', 18)
+        pdf.add_page()
+        pdf.set_font('Times New Roman', '', 10)
+        pdf.cell(txt=self.game_name + '   ...continuing with character: ' + self.charnameEdit.text(), ln=1)
+        pdf.set_font('Times New Roman', '', 16)
         pdf.cell(txt=' ', ln=1)
+        pdf.cell(txt=' ', ln=1)
+        pdf.set_font('Times New Roman', '', 18)
         pdf.cell(txt='PERSONALITY / APPEARANCE:', ln=1)
         pdf.set_font('Times New Roman', '', 14)
         some_text = self.traitsDisplay.toPlainText()
         some_text = some_text.split()
         while len(some_text) > 0:
             some_words = ''
-            if len(some_text) > 14:
-                for i in range(14):
+            if len(some_text) > 12:
+                for i in range(12):
                     some_words += some_text[i] + ' '
                 pdf.cell(txt=some_words, ln=1)
-                some_text = some_text[14:]
+                some_text = some_text[12:]
             else:
                 for i in range(len(some_text)):
                     some_words += some_text[i] + ' '
@@ -2307,11 +2318,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         some_text = some_text.split()
         while len(some_text) > 0:
             some_words = ''
-            if len(some_text) > 14:
-                for i in range(14):
+            if len(some_text) > 12:
+                for i in range(12):
                     some_words += some_text[i] + ' '
                 pdf.cell(txt=some_words, ln=1)
-                some_text = some_text[14:]
+                some_text = some_text[12:]
             else:
                 for i in range(len(some_text)):
                     some_words += some_text[i] + ' '
@@ -2325,11 +2336,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         some_text = some_text.split()
         while len(some_text) > 0:
             some_words = ''
-            if len(some_text) > 14:
-                for i in range(14):
+            if len(some_text) > 12:
+                for i in range(12):
                     some_words += some_text[i] + ' '
                 pdf.cell(txt=some_words, ln=1)
-                some_text = some_text[14:]
+                some_text = some_text[12:]
             else:
                 for i in range(len(some_text)):
                     some_words += some_text[i] + ' '

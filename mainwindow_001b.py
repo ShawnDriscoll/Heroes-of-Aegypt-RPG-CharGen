@@ -1696,7 +1696,7 @@ class Ui_MainWindow(object):
         self.spiritScore.setToolTip(_translate("MainWindow", "Spirit Score"))
         self.spiritScore.setStatusTip(_translate("MainWindow", "Assign attribute points to spirit score"))
         self.appLabel.setText(_translate("MainWindow", "HOA CharGen"))
-        self.titleLabel.setText(_translate("MainWindow", "Heroes of Aegypt!"))
+        self.titleLabel.setText(_translate("MainWindow", "Heroes of Aegypt"))
         self.armorBox.setTitle(_translate("MainWindow", "Armor"))
         self.armorDisplay.setToolTip(_translate("MainWindow", "Armor Protection"))
         self.armorDisplay.setStatusTip(_translate("MainWindow", "Character\'s worn armor"))

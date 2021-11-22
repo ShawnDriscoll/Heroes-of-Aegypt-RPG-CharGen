@@ -49,7 +49,7 @@ You can always run the .EXE version for Windows 10 if you don't have the Python 
 at this time.
 
 
-Part of the Expedition to Ancient Aegypt RPG, which was written by R. Joshua Holland.
+Part of the Expedition to Ancient Aegypt! RPG, written by R. Joshua Holland.
 Copyright 2021 - 2022, Total Party Skills.
 https://www.drivethrurpg.com/product/371713/Expedition-to-Ancient-Aegypt
 
