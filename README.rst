@@ -10,7 +10,7 @@
 Notes
 -----
 
-**Heroes of Aegypt RPG Character Generator** is being developed using Python 3.9.7 and PyQt5.
+**Heroes of Aegypt RPG Character Generator** is being developed using Python 3.11.6 and PyQt5.
 
 .. figure:: images/hoa_chargen.png
 
@@ -18,40 +18,68 @@ Notes
 Requirements
 ------------
 
-* **Windows 10**
+* **Windows 11**
 
-   It might not work in OSX or Linux.
+  It will also run on Windows 10.
 
-* **Python 3.9.7**
+* **Python 3.11.6**
    
    This code was written using the C implementation of Python
    version 3.9.7. Also known as CPython.
    
-* **PyQt5 5.15.4**
+* **PyQt5 5.15.9**
 
    PyQt5 is the framework used for displaying the Window GUI and buttons, etc.
 
-* **fpdf2 2.4.5**
+* **fpdf2 2.7.5**
 
    Fpdf2 is needed for printing the character sheets.
-   
-
-Warning
--------
-
-This code will not work with **Python 2.7-**.
 
 
 Not Using Python?
 -----------------
 
-You can always run the .EXE version for Windows 10 if you don't have the Python language installed. The .EXE version does not create PDFs
-at this time.
+You can always run the .EXE version for Windows 10 and 11 if you don't have the Python language installed.
+
+.. |ss| raw:: html
+
+    <strike>
+
+.. |se| raw:: html
+
+    </strike>
+
+Things To-Do
+------------
+
+| Continue unifying the skills across all TPS genres.
+| Instruction manual.
+| Cheat codes.
+|ss|
+
+| EXE version needs to save PDFs.
+| Move PDF character sheets closer to program folder.
+| Add Encumbrance rules from Rocket Cadets in the 11th Dimension!
+| Start on a To-Do.
+
+|se|
+
+**Known History**
+
+* v0.1.0b
+
+  Fixed skill and score caps when saving.
+  Updated character leveling. Works with latest TPS Die Roller.
+
+* v0.0.1b
+
+  Initial release.
 
 
 Part of the Expedition to Ancient Aegypt! RPG, written by R. Joshua Holland.
 Copyright 2021 - 2022, Total Party Skills.
 https://www.drivethrurpg.com/product/371713/Expedition-to-Ancient-Aegypt
+
 
 Contact
 -------
